@@ -188,7 +188,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="relative w-full h-screen overflow-hidden bg-[#020617] cursor-none">
+    <main className="relative w-full overflow-x-hidden bg-[#020617] cursor-none">
       {/* Custom Magic Cursor (Tiny glowing dot) */}
       <div 
         className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-300"
@@ -199,6 +199,7 @@ export default function Home() {
         }}
       />
 
+    <section className="relative w-full h-screen overflow-hidden sticky top-0">
       {/* Deep gradient background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-[#020617]/90 to-[#020617] pointer-events-none" />
       
@@ -230,6 +231,120 @@ export default function Home() {
           </motion.p>
         </motion.div>
       </div>
-    </main>
+    </section>
+
+    {/* Proposal Content Section - Minimalistic & Lowkey */}
+    <section className="relative z-10 w-full min-h-screen bg-[#020617] text-white/80 px-6 py-32 md:py-48 flex justify-center">
+      <div className="max-w-3xl w-full flex flex-col gap-24 font-light text-lg md:text-xl leading-relaxed">
+        
+        {/* Intro */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-playfair font-medium text-white mb-6">Constellation Systems &mdash; a proposal</h2>
+          <p className="text-blue-300/70 uppercase tracking-widest text-sm mb-4">For Avery & the Constellation team</p>
+          <div className="flex gap-6 text-sm text-white/50 mb-8 border-b border-white/10 pb-8">
+            <p><span className="text-white/30 mr-2">Role:</span>Operator &middot; Ex-founder</p>
+            <p><span className="text-white/30 mr-2">Date:</span>March 2026</p>
+          </div>
+        </motion.div>
+
+        {/* Hypotheses */}
+        <div className="space-y-24">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1 }}
+          >
+            <p className="text-blue-400/50 uppercase tracking-widest text-xs mb-4 font-normal">Hypothesis 1</p>
+            <h3 className="text-2xl font-playfair font-medium text-white mb-4">Research participant pools are a bottleneck.</h3>
+            <p className="mb-6">Sourcing and managing qualified research participants takes time that could go toward science. I'd own this end-to-end.</p>
+            
+            <div className="pl-6 border-l border-white/10 space-y-4 text-base text-white/60 mb-6">
+              <p><strong className="text-white/80 font-medium">W1:</strong> Audit what's working for competitors and Constellation. Decide: double down or test a side strategy.</p>
+              <p><strong className="text-white/80 font-medium">W2:</strong> Enough data to commit to one approach. Begin full execution.</p>
+              <p><strong className="text-white/80 font-medium">W3:</strong> Optimize and push the system hard.</p>
+              <p><strong className="text-white/80 font-medium">W4:</strong> Evaluate results. Ship a report. Begin testing the next lever.</p>
+            </div>
+            
+            <p className="text-sm font-medium text-blue-300/80">&rarr; KPI: Qualified participants who complete a session.</p>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1 }}
+          >
+            <p className="text-blue-400/50 uppercase tracking-widest text-xs mb-4 font-normal">Hypothesis 2</p>
+            <h3 className="text-2xl font-playfair font-medium text-white mb-4">Ops overhead is draining technical talent.</h3>
+            <p className="mb-6">Same logic here. I'd identify the highest-friction tasks &mdash; founder bandwidth drains, ops chaos, partnerships &mdash; and eliminate them.</p>
+            
+            <div className="pl-6 border-l border-white/10 space-y-4 text-base text-white/60 mb-6">
+              <p><strong className="text-white/80 font-medium">W1:</strong> Shadow the team. Map every recurring task that isn't core research.</p>
+              <p><strong className="text-white/80 font-medium">W2:</strong> Systematize, delegate, or kill the top offenders.</p>
+              <p><strong className="text-white/80 font-medium">W3:</strong> Deliver a clean ops playbook. The team doesn't touch these again.</p>
+            </div>
+
+            <p className="text-sm font-medium text-blue-300/80">&rarr; KPI: Researcher/founder hours reclaimed per week.</p>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1 }}
+          >
+            <p className="text-blue-400/50 uppercase tracking-widest text-xs mb-4 font-normal">Hypothesis 3</p>
+            <h3 className="text-2xl font-playfair font-medium text-white mb-4">The real bottleneck is one I haven't named yet.</h3>
+            <p className="mb-4">These first two are my best guesses from the outside. The actual constraint worth solving lives in a conversation between us.</p>
+            <p className="italic text-white/60 mb-6">"What's the thing your team keeps bumping into that no job description has captured?"</p>
+            <p className="text-sm font-medium text-blue-300/80">&rarr; KPI: Defined together.</p>
+          </motion.div>
+        </div>
+
+        {/* Expectations */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1 }}
+          className="pt-12 border-t border-white/10"
+        >
+          <h2 className="text-3xl font-playfair font-medium text-white mb-8">Expectations</h2>
+          <ul className="space-y-6 text-white/70">
+            <li className="flex gap-4">
+              <span className="text-blue-400 mt-1">&bull;</span>
+              <span>Full ownership. I'll consult the team for key decisions and always come with proposals, not just problems.</span>
+            </li>
+            <li className="flex gap-4">
+              <span className="text-blue-400 mt-1">&bull;</span>
+              <span>A mission-driven operator who's also the grounded person you want around in a moment of crisis.</span>
+            </li>
+            <li className="flex gap-4">
+              <span className="text-blue-400 mt-1">&bull;</span>
+              <span>For those building foundational models to understand the human condition.</span>
+            </li>
+          </ul>
+
+          <div className="mt-16 text-sm text-center">
+            <a 
+              href="https://www.linkedin.com/in/daniel-martinez111" 
+              target="_blank" 
+              rel="noreferrer"
+              className="inline-block border border-white/10 hover:border-white/30 rounded-full px-8 py-3 transition-colors text-white/80 hover:text-white"
+            >
+              linkedin.com/in/daniel-martinez111
+            </a>
+          </div>
+        </motion.div>
+
+      </div>
+    </section>
+  </main>
   );
 }
