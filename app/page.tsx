@@ -212,22 +212,22 @@ export default function Home() {
           transition={{ duration: 2, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-medium text-white text-center pb-2">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-medium text-white text-center pb-2">
             Constellation
           </h1>
           <motion.div 
             initial={{ scaleX: 0, opacity: 0 }}
             animate={{ scaleX: 1, opacity: 1 }}
             transition={{ delay: 1, duration: 1.5, ease: "anticipate" }}
-            className="w-full max-w-md h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent my-6" 
+            className="w-full max-w-[250px] md:max-w-md h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent my-4 md:my-6" 
           />
           <motion.p 
             initial={{ opacity: 0, letterSpacing: "0em" }}
             animate={{ opacity: 1, letterSpacing: "0.4em" }}
             transition={{ delay: 1.5, duration: 2, ease: "easeOut" }}
-            className="text-lg md:text-2xl lg:text-3xl font-light text-blue-300/90 uppercase text-center ml-2"
+            className="text-sm md:text-base lg:text-lg font-light text-blue-300/90 uppercase text-center ml-2"
           >
-            Building foundation models of human behavior
+            Building foundation models of human state
           </motion.p>
         </motion.div>
       </div>
