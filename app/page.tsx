@@ -12,6 +12,13 @@ export default function Home() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // Track mouse globally for the custom cursor too
+    const handleGlobalMouseMove = (e: MouseEvent) => {
+      document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+      document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+    };
+    window.addEventListener("mousemove", handleGlobalMouseMove);
+
     let width = window.innerWidth;
     let height = window.innerHeight;
     canvas.width = width;
@@ -175,12 +182,23 @@ export default function Home() {
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleGlobalMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
   return (
-    <main className="relative w-full h-screen overflow-hidden bg-[#020617]">
+    <main className="relative w-full h-screen overflow-hidden bg-[#020617] cursor-none">
+      {/* Custom Magic Cursor (Tiny glowing dot) */}
+      <div 
+        className="pointer-events-none fixed inset-0 z-50 transition-opacity duration-300"
+        style={{
+          background: "radial-gradient(4px 4px at var(--mouse-x) var(--mouse-y), rgba(255,255,255,1) 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+          mixBlendMode: "screen",
+          filter: "drop-shadow(0 0 4px rgba(255,255,255,0.8))",
+        }}
+      />
+
       {/* Deep gradient background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-[#020617]/90 to-[#020617] pointer-events-none" />
       
