@@ -193,8 +193,8 @@ export default function Home() {
           transition={{ duration: 2, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-[0.15em] text-transparent bg-clip-text bg-gradient-to-b from-blue-50 via-blue-200 to-blue-600 drop-shadow-[0_0_40px_rgba(56,189,248,0.4)] text-center pb-2">
-            NeuralAI
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-medium text-white text-center pb-2">
+            Constellation
           </h1>
           <motion.div 
             initial={{ scaleX: 0, opacity: 0 }}
@@ -208,7 +208,7 @@ export default function Home() {
             transition={{ delay: 1.5, duration: 2, ease: "easeOut" }}
             className="text-lg md:text-2xl lg:text-3xl font-light text-blue-300/90 uppercase text-center ml-2"
           >
-            Constellation
+            Building foundation models of human behavior
           </motion.p>
         </motion.div>
       </div>
