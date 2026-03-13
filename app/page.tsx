@@ -210,25 +210,37 @@ export default function Home() {
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 2, ease: "easeOut" }}
-          className="flex flex-col items-center"
+          className="flex flex-col items-center max-w-2xl px-6"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-medium text-white text-center pb-2">
-            Constellation
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-playfair font-medium text-white text-center pb-4 lg:pb-6">
+            Constellation Systems &mdash; a proposal
           </h1>
-          <motion.div 
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            transition={{ delay: 1, duration: 1.5, ease: "anticipate" }}
-            className="w-full max-w-[250px] md:max-w-md h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent my-4 md:my-6" 
-          />
           <motion.p 
-            initial={{ opacity: 0, letterSpacing: "0em" }}
-            animate={{ opacity: 1, letterSpacing: "0.4em" }}
-            transition={{ delay: 1.5, duration: 2, ease: "easeOut" }}
-            className="text-sm md:text-base lg:text-lg font-light text-blue-300/90 uppercase text-center ml-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 2, ease: "easeOut" }}
+            className="text-sm md:text-base text-blue-300/80 uppercase tracking-widest text-center mb-10"
           >
-            Building foundation models of human state
+            For Avery & the Constellation team
           </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 1, scaleY: 1 }}
+            transition={{ delay: 1.5, duration: 1.5, ease: "anticipate" }}
+            className="w-full max-w-[200px] h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent mb-10" 
+          />
+          
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2, duration: 2, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-12 text-sm text-white/50"
+          >
+            <p><span className="text-white/30 mr-2 uppercase tracking-wider text-xs">Role:</span>Operator &middot; Ex-founder</p>
+            <p className="hidden sm:block text-white/20">&bull;</p>
+            <p><span className="text-white/30 mr-2 uppercase tracking-wider text-xs">Date:</span>March 2026</p>
+          </motion.div>
         </motion.div>
       </div>
     </section>
@@ -237,20 +249,7 @@ export default function Home() {
     <section className="relative z-10 w-full min-h-screen bg-[#020617] text-white/80 px-6 py-32 md:py-48 flex justify-center">
       <div className="max-w-3xl w-full flex flex-col gap-24 font-light text-lg md:text-xl leading-relaxed">
         
-        {/* Intro */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="text-3xl md:text-4xl font-playfair font-medium text-white mb-6">Constellation Systems &mdash; a proposal</h2>
-          <p className="text-blue-300/70 uppercase tracking-widest text-sm mb-4">For Avery & the Constellation team</p>
-          <div className="flex gap-6 text-sm text-white/50 mb-8 border-b border-white/10 pb-8">
-            <p><span className="text-white/30 mr-2">Role:</span>Operator &middot; Ex-founder</p>
-            <p><span className="text-white/30 mr-2">Date:</span>March 2026</p>
-          </div>
-        </motion.div>
+        {/* Intro - Moved to Hero */}
 
         {/* Hypotheses */}
         <div className="space-y-24">
