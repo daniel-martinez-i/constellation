@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "NeuralAI — Constellation",
+  title: "Constellation proposal",
   description:
     "Brains, bodies, and environments converging into a latent human state. A frontier NeuroAI research proposal.",
 };

@@ -20,7 +20,7 @@ const SECTIONS = [
     body: (
       <>
         <p>
-          The human nervous system is a multimodal sensor network — brain
+          The human nervous system is a multimodal sensor network - brain
           signals, physiological rhythms, movement patterns, and environmental
           context all converge into a single latent state that drives behavior
           and experience.
@@ -28,8 +28,8 @@ const SECTIONS = [
         <p>
           Constellation is built on the thesis that no single signal tells the
           full story. By fusing neural, physiological, and environmental data
-          streams in real time, we can infer the hidden states that matter most —
-          cognitive load, emotional valence, fatigue, flow, and intent — with a
+          streams in real time, we can infer the hidden states that matter most -
+          cognitive load, emotional valence, fatigue, flow, and intent - with a
           fidelity that isolated signals can never reach.
         </p>
         <p>
@@ -49,17 +49,17 @@ const SECTIONS = [
           is scoped to a single use case with clear success criteria.
         </p>
         <p>
-          <span className="text-blue-300/70">Week 1–2:</span> Sensor integration and
+          <span className="text-blue-300/70">Week 1-2:</span> Sensor integration and
           baseline data collection across three modalities. Hardware-agnostic
           ingestion pipeline deployed.
         </p>
         <p>
-          <span className="text-blue-300/70">Week 2–3:</span> Multimodal fusion model
+          <span className="text-blue-300/70">Week 2-3:</span> Multimodal fusion model
           trained on collected data. Latent state inference validated against
           ground-truth labels.
         </p>
         <p>
-          <span className="text-blue-300/70">Week 3–4:</span> Real-time inference
+          <span className="text-blue-300/70">Week 3-4:</span> Real-time inference
           demo. Technical report with quantitative results, failure analysis,
           and recommended next steps.
         </p>
@@ -83,7 +83,7 @@ const SECTIONS = [
         </p>
         <p>
           I&rsquo;m not proposing a research project. I&rsquo;m proposing a proof of
-          capability — one that becomes the foundation of a real product.
+          capability - one that becomes the foundation of a real product.
         </p>
       </>
     ),
@@ -125,7 +125,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="mt-32 md:mt-48 text-center">
           <p className="text-[11px] tracking-[0.25em] uppercase text-blue-400/20 font-light">
-            NeuralAI — Constellation
+            NeuralAI - Constellation
           </p>
         </footer>
       </section>
